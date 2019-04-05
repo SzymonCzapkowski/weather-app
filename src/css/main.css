@@ -21,6 +21,7 @@ header {
     grid-row-end: line2;
     justify-self: center;
     align-self: end;
+    text-align: center;
 }
     
 form {
@@ -28,19 +29,28 @@ form {
     grid-column-end: line5;
     grid-row-start: line2;
     grid-row-end: line3;
-    height: 20vh;
+    height: 15vh;
     justify-self: center;
-    padding-top: 10vh;
-    /*width: 100%;*/
+    padding-top: 8vh;
+    
 }
 
 input {
     font-size: 3vh;
     text-align: center;
-    height: 5vh;
+    height: 7vh;
     width: 35vw;
     align-content: center;
-}
+    background: rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    border: solid 1px white;
+    color: white;
+ }
+
+ input:hover{
+     background:  rgba(0,0,0,0.5);
+     border: none;
+ }
 
 .recent_city {
     grid-column-start: line3;
@@ -48,37 +58,57 @@ input {
     grid-row-start: line3;
     grid-row-end: line4;
     justify-self: center;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     text-align: center;
-    border: 3px solid white; /* tylko żeby widzieć granice boxu*/
+    /*border: 3px solid white; /* tylko żeby widzieć granice boxu*/
     box-sizing: border-box;
+    margin-bottom: 10px;    
 }
 
 .name {
     font-size: 28px;
-    
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
-.ico_temp {
+.ico {  
     height: 60px;
-    width: 100%;
-    justify-items: end;
-    
+    width: 100px;
+    float: left; 
 }
 
 .temp {
-    font-size: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
     height: 60px;
-}
-
-.ico_cond {
-    height: 60px;
-    width: 100%;
+    width: 120px;
+    float: left;
+    text-align: left;
+    box-sizing: border-box;
 }
 
 .conditions {
-    font-size: 28px;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    height: 60px;
+    width: 120px;
+    text-align: left;
+    float: left;
+    box-sizing: border-box;
+}
+
+.pressure {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    height: 60px;
+    width: 120px;
+    text-align: left;
+    float: left;
+    box-sizing: border-box;
 }
 
 button {
@@ -87,10 +117,21 @@ button {
     grid-row-start: line5;
     grid-row-end: line6;
     height: 10vh;
+    font-family: sans-serif;
+    font-size: 3vh;
+    background: rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    border: solid 1px white;
+    color: rgba(255, 255, 255, 0.5);    
+}
+
+button:hover{
+     background: rgba(0,0,0,0.5);
+     border: none;
 }
 
 footer {
-    position: static;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -122,9 +163,9 @@ form_1 {
     grid-row-end: line4;
     justify-self: center;
     text-align: center;
-    width: 200px;
-    height: 200px;
-    border: 3px solid white;
+    width: 250px;
+    height: 250px;
+    /*border: 3px solid white;*/
 }
 
 .days_box {
@@ -139,11 +180,12 @@ form_1 {
 }
 
 .weather {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     box-sizing: border-box;
     text-align: center;
-    border: 3px solid white;
+    /*border: 3px solid white;*/
+    margin: 10px;
 }
 
 .day{
