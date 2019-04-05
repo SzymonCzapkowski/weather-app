@@ -6,29 +6,32 @@
     <meta name="description" content="WeatherApp">
     <meta http-equiv="X-UA-Compatibile" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="/src/css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="../src/css/main.css" type="text/css"/>
 </head>
 <body>
   <div id="container">
     <header>
-        <h2>WeatherApp</h2>
+        <h2>Weather App</h2>
     </header>
     <form>
         <input type="text" class="form_city" placeholder="search location">
     </form> 
     <div class="recent_city">
-        <span class="name">Warsaw</span>
-        <div class="ico_temp">
+        <div class="name">Warsaw</div>
+        <div class="ico">
             <img src="icons/Thermometer.png">
-            <span class="temp">18°C</span>            
         </div>
-        <div class="ico_cond">
+        <div class="temp">18°C</div>
+        <div class="ico">
             <img src="icons/Sunny.png">
-            <span class="conditions">sunny</span>
         </div>
+        <div class="conditions">sunny</div>
+        <div class="ico">
+            <img src="icons/pressure.png">
+        </div>    
+        <div class="pressure">1024 hPa</div>
     </div>
     <button>weather for more days</button>
-</div>
     <footer>
         <p>© best-team-ever</p>  
     </footer>
