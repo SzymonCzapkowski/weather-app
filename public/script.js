@@ -15,5 +15,18 @@ function current_weather(city) {
             console.log(resp.main.temp);
             console.log(resp.main.pressure);
             console.log(resp.weather[0].description);
+
+            const name = document.querySelector('.name');
+            name.textContent = city;
+
+            const conditions = document.querySelector('.conditions');
+            conditions.textContent = resp.weather[0].description;
+
+            const temp = document.querySelector('.temp');
+            temp.textContent = resp.main.temp + "°C";
+
+            const pressure = document.querySelector('.pressure');
+            pressure.textContent = resp.main.pressure + " hPa";
         })
 }
+
