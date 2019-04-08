@@ -1,6 +1,6 @@
-'use strict';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
+// import HtmlWebpackPlugin from 'html-webpack-plugin';
+// import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const path = require('path');
 
@@ -21,7 +21,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: 'babel-loader'
+                use: 'babel-loader',
             },
             {
                 test: /\.css$/,
@@ -30,12 +30,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html'
-        }),
-        new ExtractTextPlugin({
-            filename: 'app.css'
-        })
+        // new HtmlWebpackPlugin({
+        //     template: './public/index.html'
+        // }),
+        // new ExtractTextPlugin({
+        //     filename: 'app.css'
+        // })
     ]
 
 };
