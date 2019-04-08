@@ -64,6 +64,7 @@
             let inp = document.querySelector('.form_city');
             let city = inp.value;
             current_weather(city)
+            event.preventDefault();
         }
 
         function current_weather(city) {
@@ -74,6 +75,8 @@
                     console.log(resp.main.temp);
                     console.log(resp.main.pressure);
                     console.log(resp.weather[0].description);
+                    console.log(resp.weather[0].id);
+                    console.log(resp.clouds);
 
                     const name = document.querySelector('.name');
                     name.textContent = city;
@@ -95,4 +98,6 @@
             
                 document.getElementById('show2').style.display = '';
 
+
+                
         }
