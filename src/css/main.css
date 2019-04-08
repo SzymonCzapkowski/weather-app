@@ -66,6 +66,35 @@ input {
     margin-bottom: 10px;    
 }
 
+.next_day {
+
+    grid-column-start: line2;
+    grid-column-end: line3;
+    grid-row-start: line3;
+    grid-row-end: line4;
+    justify-self: center;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    /*border: 3px solid white; /* tylko żeby widzieć granice boxu*/
+    box-sizing: border-box;
+    margin-bottom: 10px;    
+}
+
+.third_day {
+    grid-column-start: line4;
+    grid-column-end: line5;
+    grid-row-start: line3;
+    grid-row-end: line4;
+    justify-self: center;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    /*border: 3px solid white; /* tylko żeby widzieć granice boxu*/
+    box-sizing: border-box;
+    margin-bottom: 10px;    
+}
+
 .name {
     font-size: 28px;
     padding-bottom: 10px;
@@ -111,13 +140,11 @@ input {
     box-sizing: border-box;
 }
 
-a {
+button {
     grid-column-start: line3;
     grid-column-end: line4;
     grid-row-start: line5;
     grid-row-end: line6;
-}
-#button {
     height: 10vh;
     font-family: sans-serif;
     font-size: 3vh;

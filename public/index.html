@@ -15,10 +15,10 @@
         <header>
             <h2>Weather App</h2>
         </header>
-        <form>
+        <form onsubmit="fetch_api()">
             <input type="text" class="form_city" placeholder="search location">
         </form>
-        <div class="recent_city">
+        <div class="recent_city" >
             <div class="name">Warsaw</div>
             <div class="ico">
                 <img src="icons/Thermometer.png">
@@ -33,7 +33,37 @@
             </div>
             <div class="pressure">1024 hPa</div>
         </div>
-        <a href="./index_1.html"><button id="button">weather for more days</button></a>
+        <div class="next_day" id="show" style="display: none">
+            <div class="name">Warsaw</div>
+            <div class="ico">
+                <img src="icons/Thermometer.png">
+            </div>
+            <div class="temp">18°C</div>
+            <div class="ico">
+                <img src="icons/Sunny.png">
+            </div>
+            <div class="conditions">sunny</div>
+            <div class="ico">
+                <img src="icons/pressure.png">
+            </div>
+            <div class="pressure">1024 hPa</div>
+        </div>
+        <div class="third_day" id="show2" style="display:none">
+            <div class="name">Warsaw</div>
+            <div class="ico">
+                <img src="icons/Thermometer.png">
+            </div>
+            <div class="temp">18°C</div>
+            <div class="ico">
+                <img src="icons/Sunny.png">
+            </div>
+            <div class="conditions">sunny</div>
+            <div class="ico">
+                <img src="icons/pressure.png">
+            </div>
+            <div class="pressure">1024 hPa</div>
+        </div>
+        <button id="button" onclick="show('show')">weather for more days</button>
         <footer>
             <p>© best-team-ever</p>
         </footer>

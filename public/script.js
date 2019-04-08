@@ -60,6 +60,7 @@
         btn.addEventListener("click", fetch_api);
 
         function fetch_api() {
+            event.preventDefault()
             let inp = document.querySelector('.form_city');
             let city = inp.value;
             current_weather(city)
@@ -86,4 +87,12 @@
                     const pressure = document.querySelector('.pressure');
                     pressure.textContent = resp.main.pressure + " hPa";
                 })
+        }
+
+        function show() {
+
+                 document.getElementById('show').style.display = '';
+            
+                document.getElementById('show2').style.display = '';
+
         }
