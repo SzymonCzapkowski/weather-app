@@ -1,42 +1,45 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>WeatherApp</title>
     <meta name="description" content="WeatherApp">
-    <meta http-equiv="X-UA-Compatibile" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="../src/css/main.css" type="text/css"/>
+    <meta http-equiv="X-UA-Compatibile" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../src/css/main.css" type="text/css" />
 </head>
-<body>
-  <div id="container">
-    <header>
-        <h2>Weather App</h2>
-    </header>
-    <form>
-        <input type="text" class="form_city" placeholder="search location">
-    </form> 
-    <div class="recent_city">
-        <div class="name">Warsaw</div>
-        <div class="ico">
-            <img src="icons/Thermometer.png">
+
+<body onload="getLocation()">
+    <div id="container">
+        <header>
+            <h2>Weather App</h2>
+        </header>
+        <form>
+            <input type="text" class="form_city" placeholder="search location">
+        </form>
+        <div class="recent_city">
+            <div class="name">Warsaw</div>
+            <div class="ico">
+                <img src="icons/Thermometer.png">
+            </div>
+            <div class="temp">18°C</div>
+            <div class="ico">
+                <img src="icons/Sunny.png">
+            </div>
+            <div class="conditions">sunny</div>
+            <div class="ico">
+                <img src="icons/pressure.png">
+            </div>
+            <div class="pressure">1024 hPa</div>
         </div>
-        <div class="temp">18°C</div>
-        <div class="ico">
-            <img src="icons/Sunny.png">
-        </div>
-        <div class="conditions">sunny</div>
-        <div class="ico">
-            <img src="icons/pressure.png">
-        </div>    
-        <div class="pressure">1024 hPa</div>
+        <a href="./index_1.html"><button id="button">weather for more days</button></a>
+        <footer>
+            <p>© best-team-ever</p>
+        </footer>
     </div>
-    <a href="./index_1.html"><button id="button">weather for more days</button></a>
-    <footer>
-        <p>© best-team-ever</p>  
-    </footer>
-  </div>
- <script src="dist/main.bundle.js"></script>
- <script src="script.js"></script>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
