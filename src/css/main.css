@@ -4,7 +4,6 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background: no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -15,7 +14,7 @@ body {
 #container {
     display: grid;
     grid-template-columns: [line1] 10vw [line2] 20vw [line3] 30vw [line4] 20vw [line5] 10vw [line6];
-    grid-template-rows: [line1] 15vh [line2] auto [line3] auto [line4] 3vh [line5] auto [line6];
+    grid-template-rows: [line1] 15vh [line2] auto [line3] auto [line4] auto [line5] auto [line6];
     justify-content: center;
 }
 
@@ -36,7 +35,13 @@ form {
     grid-row-end: line3;
     height: 10vh;
     justify-self: center;
-    padding-top: 4vh;
+    padding-top: 3vh;
+    padding-bottom: 9vh;    
+    text-align: center;
+}
+
+a {
+    font-size: 30px;
 }
 
 input {
@@ -58,7 +63,7 @@ input {
 
 .weather {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     grid-column-start: line2;
     grid-column-end: line5;
     grid-row-start: line3;
@@ -68,18 +73,23 @@ input {
 
 .day {
     display: grid;
+    width: 90%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
     "name name"
     "icotemp temp"
     "icoconditions conditions"
     "icopressure pressure"
-    
+}
+
+.day>div {
+   width: 100%;
 }
 
 .recent_city {
     justify-self: center;
     height: 250px;
+    width: 300px;
     text-align: center;
     box-sizing: border-box;
     margin-bottom: 10px; 
@@ -98,6 +108,7 @@ input {
     justify-self: center;
     align-self: flex-end;
     height: 250px;
+    width: 300px;
     text-align: center;
     box-sizing: border-box;
     margin-bottom: 10px;
@@ -116,6 +127,7 @@ input {
     justify-self: center;
     align-self: flex-end;
     height: 250px;
+    width: 300px;
     text-align: center;
     box-sizing: border-box;
     margin-bottom: 10px;

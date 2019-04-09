@@ -10,30 +10,31 @@
     <link rel="stylesheet" href="../src/css/main.css" type="text/css" />
 </head>
 
-<body onload="showRandom(); getLocation()">
+<body onload="getLocation()">
     <div id='weathercondition'></div>
     <div id="container">
         <header>
             <h2>Weather App</h2>
         </header>
         <form onsubmit="fetch_api()">
-            <input type="text" class="form_city" placeholder="search location">
+            <input type="text" class="form_city" placeholder="search location"><br><br>
+            <a class="city_name">City</a>
         </form>
         <div class="weather">
             <div class="recent_city day">
-                <div class="name"></div>
+                <div class="name">Today</div>
                 <div class="ico icotemp">
                     <img src="icons/Thermometer.png">
                 </div>
-                <div class="temp"></div>
+                <div class="temp">18°C</div>
                 <div class="ico icoconditions">
                     <img src="icons/Sunny.png">
                 </div>
-                <div class="conditions"></div>
+                <div class="conditions">sunny</div>
                 <div class="ico icopressure">
                     <img src="icons/pressure.png">
                 </div>
-                <div class="pressure"></div>
+                <div class="pressure">1024 hPa</div>
             </div>
             <div class="next_day day" id="show" style="display: none">
                 <div class="name">Tomorrow</div>

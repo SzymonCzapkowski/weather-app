@@ -55,10 +55,6 @@ function getJson(url) {
 
 };
 
-
-const btn = document.querySelector('#button');
-btn.addEventListener("click", fetch_api);
-
 function fetch_api() {
     event.preventDefault()
     let inp = document.querySelector('.form_city');
@@ -73,32 +69,32 @@ function current_weather(city) {
         .then(resp => resp.json())
         .then(resp => {
 
-            const name = document.querySelector('.recent_city .name');
-            name.textContent = city;
+            const city_name = document.querySelector('.city_name');
+            city_name.textContent = city;
 
             //Day 1
             let conditions = document.querySelector('.recent_city .conditions');
             conditions.textContent = resp.list[0].weather[0].description;
             let temp = document.querySelector('.recent_city .temp');
-            temp.textContent = resp.list[0].main.temp + "°C";
+            temp.textContent = resp.list[0].main.temp.toFixed(1) + "°C";
             let pressure = document.querySelector('.recent_city .pressure');
-            pressure.textContent = resp.list[0].main.pressure + " hPa";
+            pressure.textContent = resp.list[0].main.pressure.toFixed(1) + " hPa";
 
             //Day 2
             conditions = document.querySelector('.next_day .conditions');
             conditions.textContent = resp.list[8].weather[0].description;
             temp = document.querySelector('.next_day .temp');
-            temp.textContent = resp.list[8].main.temp + "°C";
+            temp.textContent = resp.list[8].main.temp.toFixed(1) + "°C";
             pressure = document.querySelector('.next_day .pressure');
-            pressure.textContent = resp.list[8].main.pressure + " hPa";
+            pressure.textContent = resp.list[8].main.pressure.toFixed(1) + " hPa";
 
             //Day 3
             conditions = document.querySelector('.third_day .conditions');
             conditions.textContent = resp.list[16].weather[0].description;
             temp = document.querySelector('.third_day .temp');
-            temp.textContent = resp.list[16].main.temp + "°C";
+            temp.textContent = resp.list[16].main.temp.toFixed(1) + "°C";
             pressure = document.querySelector('.third_day .pressure');
-            pressure.textContent = resp.list[16].main.pressure + " hPa";
+            pressure.textContent = resp.list[16].main.pressure.toFixed(1) + " hPa";
         })
 }
 
