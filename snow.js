@@ -1,0 +1,84 @@
+class Snow {
+	constructor(xPosition, yPosition, dropSpeed, dropWidth, dropHeight) {
+		this.xPosition = xPosition;
+		this.yPosition = yPosition;
+		this.dropSpeed = dropSpeed;
+		this.dropWidth = dropWidth;
+		this.dropHeight = dropHeight;
+		this.element;
+	}
+
+	show() {
+		this.element = document.createElement("div");
+		this.element.className += "rainDrop";
+		this.element.style.top = this.yPosition + "px";
+		this.element.style.left = this.xPosition + "px";
+		this.element.style.width = this.dropWidth + "px";
+		this.element.style.height = this.dropHeight + "px";
+
+		let el = document.getElementById("content");
+		el.appendChild(this.element);
+	}
+
+	fall() {
+		const makeItRain = () => {
+			this.yPosition = this.yPosition + this.dropSpeed;
+			this.element.style.top = this.yPosition +"px";
+
+			if(this.yPosition < window.innerHeight) {
+				requestAnimationFrame(makeItRain);
+			} else {
+				this.yPosition = -10;
+				requestAnimationFrame(makeItRain);
+			}
+
+		}
+
+		requestAnimationFrame(makeItRain);
+	}
+}
+
+    // **************************************************
+
+const pageWidth = window.innerWidth;
+const pageHeight = window.innerHeight;
+const defaultDropNum = 200;
+
+
+function makeItRain (num) {
+
+	let elements = document.getElementById("content");
+
+	while (elements.hasChildNodes()) {
+		elements.removeChild(elements.lastChild);
+	}
+
+
+	for (let i = 0 ; i < num ; i ++) {
+		let randomX = Math.floor(Math.random() * (pageWidth)); 
+		let randomY = Math.floor(Math.random() * (pageHeight));
+		let dropSpeed = Math.floor(Math.random() * (25 - 5)) + 5;
+		let random = Math.random() * (30 - 10);
+		let dropWidth = random;
+		let dropHeight = random;
+		let d = new Snow (randomX, randomY, dropSpeed, dropWidth, dropHeight);
+
+		d.show();
+		d.fall();
+
+	}
+
+}
+
+function updateNumberInView (num) {
+	let el = defaultDropNum;
+	el.nodeValue = num;
+}
+
+function changeNumDrops (num) {
+	updateNumberInView(num);
+	makeItRain(num);
+}
+
+updateNumberInView(defaultDropNum);
+makeItRain(defaultDropNum);
