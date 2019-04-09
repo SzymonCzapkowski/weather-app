@@ -109,3 +109,13 @@ function show() {
     document.getElementById('show2').style.display = '';
 
 }
+
+function showRandom() {
+    const cities = [
+        'Warsaw', 'Berlin', 'Paris', 'Madrid', 'Roma', 'Moscow', 'Dubai',
+        'Bangkok', 'New York', 'Los Angeles', 'Buenos Aires', 'Hong Kong',
+        'Tokyo', 'Sydney', 'Helsinki', 'Singapore', 'Lisbon', 'Las Vegas'
+    ];
+    let randomCity = cities[Math.floor(Math.random() * cities.length)]
+    current_weather(randomCity);
+}
