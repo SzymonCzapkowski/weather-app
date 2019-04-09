@@ -1,4 +1,4 @@
-class Snow {
+class Drop {
 	constructor(xPosition, yPosition, dropSpeed, dropWidth, dropHeight) {
 		this.xPosition = xPosition;
 		this.yPosition = yPosition;
@@ -16,7 +16,7 @@ class Snow {
 		this.element.style.width = this.dropWidth + "px";
 		this.element.style.height = this.dropHeight + "px";
 
-		let el = document.getElementById("content");
+		let el = document.getElementById("weathercondition");
 		el.appendChild(this.element);
 	}
 
@@ -47,7 +47,7 @@ const defaultDropNum = 200;
 
 function makeItRain (num) {
 
-	let elements = document.getElementById("content");
+	let elements = document.getElementById("weathercondition");
 
 	while (elements.hasChildNodes()) {
 		elements.removeChild(elements.lastChild);
@@ -55,13 +55,12 @@ function makeItRain (num) {
 
 
 	for (let i = 0 ; i < num ; i ++) {
-		let randomX = Math.floor(Math.random() * (pageWidth)); 
+		let randomX = Math.floor(Math.random() * (pageWidth));
 		let randomY = Math.floor(Math.random() * (pageHeight));
 		let dropSpeed = Math.floor(Math.random() * (25 - 5)) + 5;
-		let random = Math.random() * (30 - 10);
-		let dropWidth = random;
-		let dropHeight = random;
-		let d = new Snow (randomX, randomY, dropSpeed, dropWidth, dropHeight);
+		let dropWidth = Math.floor(Math.random() * (dropSpeed/10 - 1)) + 1;
+		let dropHeight = Math.floor(Math.random() * (dropSpeed*2 - 3)) + 3;
+		let d = new Drop(randomX, randomY, dropSpeed, dropWidth, dropHeight);
 
 		d.show();
 		d.fall();
