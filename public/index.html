@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>WeatherApp</title>
@@ -8,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../src/css/main.css" type="text/css" />
 </head>
+
 <body onload="getLocation()">
     <div id="container">
         <header>
@@ -16,19 +18,6 @@
         <form onsubmit="fetch_api()">
             <input type="text" class="form_city" placeholder="search location">
         </form>
-<<<<<<< HEAD
-            <div class="recent_city" >
-                <div class="name">Warsaw</div>
-                <div class="ico">
-                    <img src="icons/Thermometer.png">
-                </div>
-                <div class="temp">18°C</div>
-                <div class="ico">
-                    <img src="icons/Sunny.png">
-                </div>
-                <div class="conditions">sunny</div>
-                <div class="ico">
-=======
         <div class="weather">
             <div class="recent_city day">
                 <div class="name">Warsaw</div>
@@ -41,16 +30,11 @@
                 </div>
                 <div class="conditions">sunny</div>
                 <div class="ico icopressure">
->>>>>>> HTML+CSS
                     <img src="icons/pressure.png">
                 </div>
                 <div class="pressure">1024 hPa</div>
             </div>
-<<<<<<< HEAD
-            <div class="next_day" id="show" style="display: none">
-=======
             <div class="next_day day" id="show" style="display: none">
->>>>>>> HTML+CSS
                 <div class="name">Tomorrow</div>
                 <div class="ico">
                     <img src="icons/Thermometer.png">
@@ -65,11 +49,7 @@
                 </div>
                 <div class="pressure">1024 hPa</div>
             </div>
-<<<<<<< HEAD
-            <div class="third_day" id="show2" style="display:none">
-=======
             <div class="third_day day" id="show2" style="display:none">
->>>>>>> HTML+CSS
                 <div class="name">Overmorrow</div>
                 <div class="ico">
                     <img src="icons/Thermometer.png">
@@ -84,20 +64,13 @@
                 </div>
                 <div class="pressure">1024 hPa</div>
             </div>
-<<<<<<< HEAD
-        <button id="button" onclick="show('show')">weather for more days</button>
-        </div>
-        <footer>
-            <p>© best-team-ever</p>
-        </footer>
-=======
         </div>
         <button id="button" onclick="show('show')">weather for more days</button>
     </div>
     <footer>
         <p>© best-team-ever</p>
     </footer>
->>>>>>> HTML+CSS
     <script src="./script.js"></script>
 </body>
+
 </html>
