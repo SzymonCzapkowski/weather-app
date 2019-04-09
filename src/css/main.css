@@ -10,8 +10,6 @@ body {
     grid-template-columns: [line1] 10vw [line2] 20vw [line3] 30vw [line4] 20vw [line5] 10vw [line6];
     grid-template-rows: [line1] 15vh [line2] auto [line3] auto [line4] 3vh [line5] auto [line6];
     justify-content: center;
-    /*overflow: hidden;
-    box-sizing: border-box;*/
 }
 
 header {
@@ -51,6 +49,7 @@ input {
      border: none;
  }
 
+<<<<<<< HEAD
 /*.wrap {
     grid-column-start: line2;
     grid-column-end: line5;
@@ -62,15 +61,34 @@ input {
 .recent_city {
     grid-column-start: line3;
     grid-column-end: line4;
+=======
+.weather {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-column-start: line2;
+    grid-column-end: line5;
+>>>>>>> HTML+CSS
     grid-row-start: line3;
-    grid-row-end: line4;
+    justify-content: center;
+}
+
+.day {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "name name"
+    "icotemp temp"
+    "icoconditions conditions"
+    "icopressure pressure"
+}
+
+.recent_city {
     justify-self: center;
     height: 250px;
-    width: 250px;
     text-align: center;
-    /*border: 3px solid white; /* tylko żeby widzieć granice boxu*/
     box-sizing: border-box;
     margin-bottom: 10px; 
+<<<<<<< HEAD
        
 }
 
@@ -80,27 +98,31 @@ input {
     grid-column-end: line3;
     grid-row-start: line3;
     grid-row-end: line5;
+=======
+}
+
+.next_day {
+>>>>>>> HTML+CSS
     justify-self: center;
     align-self: flex-end;
     height: 250px;
-    width: 250px;
     text-align: center;
-    /*border: 3px solid white; /* tylko żeby widzieć granice boxu*/
     box-sizing: border-box;
     margin-bottom: 10px;    
 }
 
 .third_day {
+<<<<<<< HEAD
     grid-column-start: line4;
     grid-column-end: line5;
     grid-row-start: line3;
     grid-row-end: line5;
+=======
+>>>>>>> HTML+CSS
     justify-self: center;
     align-self: flex-end;
     height: 250px;
-    width: 250px;
     text-align: center;
-    /*border: 3px solid white; /* tylko żeby widzieć granice boxu*/
     box-sizing: border-box;
     margin-bottom: 10px;    
 }
@@ -109,12 +131,12 @@ input {
     font-size: 28px;
     padding-bottom: 10px;
     padding-top: 10px;
+    grid-area: name;
 }
 
 .ico {  
     height: 60px;
     width: 100px;
-    float: left; 
 }
 
 .temp {
@@ -123,9 +145,10 @@ input {
     font-size: 26px;
     height: 60px;
     width: 120px;
-    float: left;
+    /* float: left; */
     text-align: left;
     box-sizing: border-box;
+    grid-area: temp;
 }
 
 .conditions {
@@ -135,8 +158,8 @@ input {
     height: 60px;
     width: 120px;
     text-align: left;
-    float: left;
     box-sizing: border-box;
+    grid-area: conditions;
 }
 
 .pressure {
@@ -146,8 +169,20 @@ input {
     height: 60px;
     width: 120px;
     text-align: left;
-    float: left;
     box-sizing: border-box;
+    grid-area: pressure;
+}
+
+.icotemp {
+    grid-area: icotemp;
+}
+
+.icoconditions {
+grid-area: icoconditions;
+}
+
+.icopressure {
+    grid-area: icopressure;
 }
 
 button {
