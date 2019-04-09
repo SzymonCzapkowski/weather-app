@@ -56,6 +56,7 @@ input {
     grid-column-end: line5;
     grid-row-start: line3;
     justify-content: center;
+    
 }
 
 .day {
@@ -66,6 +67,7 @@ input {
     "icotemp temp"
     "icoconditions conditions"
     "icopressure pressure"
+    
 }
 
 .recent_city {
@@ -74,6 +76,15 @@ input {
     text-align: center;
     box-sizing: border-box;
     margin-bottom: 10px; 
+    background: rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    border: solid 1px white;
+    color: rgba(255, 255, 255, 1);  
+}
+
+.recent_city:hover{
+     background: rgba(0,0,0,0.5);
+     border: none;
 }
 
 .next_day {
@@ -82,7 +93,16 @@ input {
     height: 250px;
     text-align: center;
     box-sizing: border-box;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    border: solid 1px white;
+    color: rgba(255, 255, 255, 1);    
+}
+
+.next_day:hover{
+     background: rgba(0,0,0,0.5);
+     border: none;
 }
 
 .third_day {
@@ -91,7 +111,16 @@ input {
     height: 250px;
     text-align: center;
     box-sizing: border-box;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    border: solid 1px white;
+    color: rgba(255, 255, 255, 1);    
+}
+
+.third_day:hover{
+     background: rgba(0,0,0,0.5);
+     border: none;
 }
 
 .name {
@@ -124,7 +153,6 @@ input {
     height: 60px;
     width: 120px;
     text-align: left;
-    
     box-sizing: border-box;
     grid-area: conditions;
 }
