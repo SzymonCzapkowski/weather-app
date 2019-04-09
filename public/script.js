@@ -1,3 +1,11 @@
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showLocation, showError);
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
+};
+
 function showLocation(position) {
     let lat = position.coords.latitude;
     let lng = position.coords.longitude;
