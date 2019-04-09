@@ -1,8 +1,15 @@
 body {
-    background-color: #567FAD; 
     font-family: sans-serif;
     font-size: 20px;
     color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #container {
@@ -10,8 +17,6 @@ body {
     grid-template-columns: [line1] 10vw [line2] 20vw [line3] 30vw [line4] 20vw [line5] 10vw [line6];
     grid-template-rows: [line1] 15vh [line2] auto [line3] auto [line4] 3vh [line5] auto [line6];
     justify-content: center;
-    /*overflow: hidden;
-    box-sizing: border-box;*/
 }
 
 header {
@@ -40,81 +45,101 @@ input {
     height: 7vh;
     width: 35vw;
     align-content: center;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.6);
     border-radius: 1rem;
     border: solid 1px white;
     color: white;
  }
 
  input:hover{
-     background:  rgba(0,0,0,0.5);
+     background:  rgba(0,0,0,0.8);
      border: none;
  }
 
-/*.wrap {
+.weather {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     grid-column-start: line2;
     grid-column-end: line5;
     grid-row-start: line3;
-    grid-row-end: line5;
     justify-content: center;
-}*/
+    
+}
+
+.day {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "name name"
+    "icotemp temp"
+    "icoconditions conditions"
+    "icopressure pressure"
+    
+}
 
 .recent_city {
-    grid-column-start: line3;
-    grid-column-end: line4;
-    grid-row-start: line3;
-    grid-row-end: line4;
     justify-self: center;
     height: 250px;
-    width: 250px;
     text-align: center;
-    /*border: 3px solid white; /* tylko żeby widzieć granice boxu*/
     box-sizing: border-box;
     margin-bottom: 10px; 
-       
+    background: rgba(0,0,0,0.6);
+    border-radius: 1rem;
+    border: solid 1px white;
+    color: rgba(255, 255, 255, 1);  
+}
+
+.recent_city:hover{
+     background: rgba(0,0,0,0.8);
+     border: none;
 }
 
 .next_day {
-
-    grid-column-start: line2;
-    grid-column-end: line3;
-    grid-row-start: line3;
-    grid-row-end: line5;
     justify-self: center;
     align-self: flex-end;
     height: 250px;
-    width: 250px;
     text-align: center;
-    /*border: 3px solid white; /* tylko żeby widzieć granice boxu*/
     box-sizing: border-box;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 1rem;
+    border: solid 1px white;
+    color: rgba(255, 255, 255, 1);    
+}
+
+.next_day:hover{
+     background: rgba(0,0,0,0.8);
+     border: none;
 }
 
 .third_day {
-    grid-column-start: line4;
-    grid-column-end: line5;
-    grid-row-start: line3;
-    grid-row-end: line5;
     justify-self: center;
     align-self: flex-end;
     height: 250px;
-    width: 250px;
     text-align: center;
-    /*border: 3px solid white; /* tylko żeby widzieć granice boxu*/
     box-sizing: border-box;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 1rem;
+    border: solid 1px white;
+    color: rgba(255, 255, 255, 1);    
+}
+
+.third_day:hover{
+     background: rgba(0,0,0,0.8);
+     border: none;
 }
 
 .name {
     font-size: 28px;
     padding-bottom: 10px;
     padding-top: 10px;
+    grid-area: name;
 }
 
 .ico {  
     height: 60px;
     width: 100px;
-    float: left; 
 }
 
 .temp {
@@ -123,9 +148,9 @@ input {
     font-size: 26px;
     height: 60px;
     width: 120px;
-    float: left;
     text-align: left;
     box-sizing: border-box;
+    grid-area: temp;
 }
 
 .conditions {
@@ -135,8 +160,8 @@ input {
     height: 60px;
     width: 120px;
     text-align: left;
-    float: left;
     box-sizing: border-box;
+    grid-area: conditions;
 }
 
 .pressure {
@@ -146,8 +171,20 @@ input {
     height: 60px;
     width: 120px;
     text-align: left;
-    float: left;
     box-sizing: border-box;
+    grid-area: pressure;
+}
+
+.icotemp {
+    grid-area: icotemp;
+}
+
+.icoconditions {
+    grid-area: icoconditions;
+}
+
+.icopressure {
+    grid-area: icopressure;
 }
 
 button {
@@ -158,14 +195,14 @@ button {
     height: 10vh;
     font-family: sans-serif;
     font-size: 3vh;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.6);
     border-radius: 1rem;
     border: solid 1px white;
     color: rgba(255, 255, 255, 0.5);    
 }
 
 button:hover{
-     background: rgba(0,0,0,0.5);
+     background: rgba(0,0,0,0.8);
      border: none;
 }
 
@@ -182,3 +219,44 @@ footer p {
     box-sizing: border-box;
 }
 
+
+/* ************************** RAIN ************************* */
+
+.rainDrop {
+	position: absolute;
+    background-color: white;
+	border-radius: 100% 100% 80% 80%;
+}
+
+button {
+    margin: auto;
+    display: block;
+}
+
+/* ******************* CLOUDS ******************** */
+
+.cloud {
+    opacity: 0.8;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    z-index: -1;
+  }
+  
+  #cloud1 {
+    position: absolute;
+    top: -60px;
+    left: -400px;
+  }
+  
+  #cloud2 {
+    position: absolute;
+    top: -40px;
+    left: 300px;
+  }
+  
+  #cloud3 {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+  }
