@@ -9,13 +9,13 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 #container {
     display: grid;
     grid-template-columns: [line1] 10vw [line2] 20vw [line3] 30vw [line4] 20vw [line5] 10vw [line6];
-    grid-template-rows: [line1] 12vh [line2] auto [line3] auto [line4] auto [line5] auto [line6];
+    grid-template-rows: [line1] 14vh [line2] auto [line3] auto [line4] auto [line5] auto [line6];
     justify-content: center;
 }
 
@@ -209,6 +209,7 @@ button {
     grid-row-start: line5;
     grid-row-end: line6;
     height: 10vh;
+    width: 38vmin;
     font-family: sans-serif;
     font-size: 3vh;
     background: rgba(0,0,0,0.6);
@@ -219,8 +220,8 @@ button {
 }
 
 button:hover{
-     background: rgba(0,0,0,0.8);
-     border: none;
+    background: rgba(0,0,0,0.8);
+    border: none;
 }
 
 .authors {
@@ -231,11 +232,11 @@ button:hover{
 
 .media  {
     display: flex;
-    font-size: 5.5vh;
+    font-size: 4vh;
     box-sizing:border-box;
     position: relative;
     justify-content: center;
-    box-sizing: border-box;
+  
 }
 
 .media a {
@@ -244,7 +245,7 @@ button:hover{
     margin: 10px;
     background: rgba(0,0,0,0.6);
     border-radius: 6px;
-    height: 5.7vh;
+    height: 4.2vh;
     box-sizing: border-box;
 }
 
@@ -253,7 +254,7 @@ button:hover{
     border: none;
 }
 
-footer {
+/*footer {
     position: relative;
     bottom: 0;
     left: 0;
@@ -265,7 +266,7 @@ footer p {
     font-size: 16px;
     box-sizing: border-box;
 }
-
+*/
 
 /* ************************** RAIN ************************* */
 
