@@ -14,7 +14,7 @@ body {
 #container {
     display: grid;
     grid-template-columns: [line1] 10vw [line2] 20vw [line3] 30vw [line4] 20vw [line5] 10vw [line6];
-    grid-template-rows: [line1] 15vh [line2] auto [line3] auto [line4] auto [line5] auto [line6];
+    grid-template-rows: [line1] 12vh [line2] auto [line3] auto [line4] auto [line5] auto [line6];
     justify-content: center;
 }
 
@@ -24,7 +24,6 @@ header {
     grid-row-start: line1;
     grid-row-end: line2;
     justify-self: center;
-    align-self: end;
     text-align: center;
 }
     
@@ -38,6 +37,10 @@ form {
     padding-top: 3vh;
     padding-bottom: 9vh;    
     text-align: center;
+}
+
+.city_name{
+    text-transform: capitalize;
 }
 
 a {
@@ -216,6 +219,36 @@ button {
 button:hover{
      background: rgba(0,0,0,0.8);
      border: none;
+}
+
+.authors {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.media  {
+    display: flex;
+    font-size: 40px;
+    box-sizing:border-box;
+    position: relative;
+    justify-content: center;
+    align-content: flex-end;
+    box-sizing: border-box;
+}
+
+.media a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 6px;
+    /*border: solid 1px white;*/
+}
+
+.media a:hover{
+    background: rgba(0,0,0,0.8);
+    border: none;
 }
 
 footer {
