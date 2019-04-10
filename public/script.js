@@ -108,6 +108,7 @@ function current_weather(city) {
             const time = (new Date()).getHours()
 
             const checkWeather = function (weatherId,clouds) {
+                let z = document.getElementById("weathercondition")
                 if (time>='6' && time<'20') {
                     if (clouds>=70) {
                         document.getElementsByTagName("body")[0].style.backgroundImage = "url(../src/img/sunny2.jpg)";
@@ -133,16 +134,18 @@ function current_weather(city) {
                     script.setAttribute('type', 'text/javascript');
                     script.setAttribute('src', '../src/js/rain.js');
                     document.head.appendChild(script);
+                    z.style.display=''
                     return false;
-                }
+                } else {z.style.display='none'}
 
                 if (weatherId >= '600' && weatherId < '700') {
                     var script = document.createElement('script');
                     script.setAttribute('type', 'text/javascript');
                     script.setAttribute('src', '../src/js/snow.js');
                     document.head.appendChild(script);
+                    z.style.display=''
                     return false;
-                }
+                } else {z.style.display='none'}
 
                 if (weatherId >= '200' && weatherId < '300') {
                     var script = document.createElement('link');
