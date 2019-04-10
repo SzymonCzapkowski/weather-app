@@ -79,6 +79,8 @@ function current_weather(city) {
             temp.textContent = resp.list[0].main.temp.toFixed(1) + "°C";
             let pressure = document.querySelector('.recent_city .pressure');
             pressure.textContent = resp.list[0].main.pressure.toFixed(1) + " hPa";
+            let id1 = resp.list[0].weather[0].id;
+            let clouds1 = resp.list[0].clouds.all;
 
             //Day 2
             conditions = document.querySelector('.next_day .conditions');
@@ -87,6 +89,8 @@ function current_weather(city) {
             temp.textContent = resp.list[8].main.temp.toFixed(1) + "°C";
             pressure = document.querySelector('.next_day .pressure');
             pressure.textContent = resp.list[8].main.pressure.toFixed(1) + " hPa";
+            let id2 = resp.list[8].weather[0].id;
+            let clouds2 = resp.list[8].clouds.all;
 
             //Day 3
             conditions = document.querySelector('.third_day .conditions');
@@ -95,6 +99,8 @@ function current_weather(city) {
             temp.textContent = resp.list[16].main.temp.toFixed(1) + "°C";
             pressure = document.querySelector('.third_day .pressure');
             pressure.textContent = resp.list[16].main.pressure.toFixed(1) + " hPa";
+            let id3 = resp.list[16].weather[0].id;
+            let clouds3 = resp.list[16].clouds.all;
         })
 }
 
