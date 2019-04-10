@@ -308,3 +308,9 @@ button {
     top: 300px;
     left: 50px;
   }
+
+  #weathercondition {
+
+    position: fixed;
+
+}
