@@ -38,13 +38,11 @@ form {
     padding-top: 3vh;
     padding-bottom: 9vh;    
     text-align: center;
+    z-index: 1;
 }
 
 .city_name{
     text-transform: capitalize;
-}
-
-a {
     font-size: 30px;
 }
 
@@ -72,7 +70,6 @@ input {
     grid-column-end: line5;
     grid-row-start: line3;
     justify-content: center;
-    
 }
 
 .day {
@@ -101,6 +98,7 @@ input {
     border-radius: 1rem;
     border: solid 1px white;
     color: rgba(255, 255, 255, 1);  
+    z-index: 1;
 }
 
 .recent_city:hover{
@@ -120,6 +118,7 @@ input {
     border-radius: 1rem;
     border: solid 1px white;
     color: rgba(255, 255, 255, 1);    
+    z-index: 1;
 }
 
 .next_day:hover{
@@ -139,6 +138,7 @@ input {
     border-radius: 1rem;
     border: solid 1px white;
     color: rgba(255, 255, 255, 1);    
+    z-index: 1;
 }
 
 .third_day:hover{
@@ -214,7 +214,8 @@ button {
     background: rgba(0,0,0,0.6);
     border-radius: 1rem;
     border: solid 1px white;
-    color: rgba(255, 255, 255, 0.5);    
+    color: rgba(255, 255, 255, 0.7);    
+    z-index: 1;
 }
 
 button:hover{
@@ -230,11 +231,10 @@ button:hover{
 
 .media  {
     display: flex;
-    font-size: 40px;
+    font-size: 5.5vh;
     box-sizing:border-box;
     position: relative;
     justify-content: center;
-    align-content: flex-end;
     box-sizing: border-box;
 }
 
@@ -244,7 +244,8 @@ button:hover{
     margin: 10px;
     background: rgba(0,0,0,0.6);
     border-radius: 6px;
-    /*border: solid 1px white;*/
+    height: 5.7vh;
+    box-sizing: border-box;
 }
 
 .media a:hover{
