@@ -42,7 +42,7 @@ class Drop {
 
 const pageWidth = window.innerWidth;
 const pageHeight = window.innerHeight;
-const defaultDropNum = 100;
+const defaultDropNum = 50;
 
 
 function makeItRain (num) {

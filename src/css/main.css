@@ -78,7 +78,7 @@ input {
 
 .day {
     display: grid;
-    width: 90%;
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
     "name name"
@@ -312,3 +312,9 @@ button {
     top: 300px;
     left: 50px;
   }
+
+  #weathercondition {
+
+    position: fixed;
+
+}
