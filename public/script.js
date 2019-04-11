@@ -111,19 +111,19 @@ function current_weather(city) {
                 let z = document.getElementById("weathercondition")
                 if (time>='6' && time<'20') {
                     if (clouds>=70) {
-                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(../src/img/sunny2.jpg)";
+                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(src/img/sunny2.jpg)";
                     } else if (clouds>30 && clouds<70) {
-                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(../src/img/sunny1.jpg)";
+                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(src/img/sunny1.jpg)";
                     } else {
-                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(../src/img/sunny.jpg)";
+                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(src/img/sunny.jpg)";
                     }         
                 } else { 
                     if (clouds>=70) {
-                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(../src/img/night2.jpg)";
+                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(src/img/night2.jpg)";
                     } else if (clouds>30 && clouds<70) {
-                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(../src/img/night1.jpg)";
+                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(src/img/night1.jpg)";
                     } else {
-                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(../src/img/night.png)";
+                        document.getElementsByTagName("body")[0].style.backgroundImage = "url(src/img/night.png)";
                     }   
                 }
 
@@ -132,7 +132,7 @@ function current_weather(city) {
                 if (weatherId >= '500' && weatherId < '600') {
                     var script = document.createElement('script');
                     script.setAttribute('type', 'text/javascript');
-                    script.setAttribute('src', '../src/js/rain.js');
+                    script.setAttribute('src', 'src/js/rain.js');
                     document.head.appendChild(script);
                     z.style.display=''
                     return false;
@@ -141,7 +141,7 @@ function current_weather(city) {
                 if (weatherId >= '600' && weatherId < '700') {
                     var script = document.createElement('script');
                     script.setAttribute('type', 'text/javascript');
-                    script.setAttribute('src', '../src/js/snow.js');
+                    script.setAttribute('src', 'src/js/snow.js');
                     document.head.appendChild(script);
                     z.style.display=''
                     return false;
@@ -151,7 +151,7 @@ function current_weather(city) {
                     var script = document.createElement('link');
                     script.setAttribute('rel', 'stylesheet');
                     script.setAttribute('type', 'text/css');
-                    script.setAttribute('href', '../src/css/storm.css');
+                    script.setAttribute('href', 'src/css/storm.css');
                     document.head.appendChild(script);
                     return false;
                 }
